@@ -1,6 +1,7 @@
+
 # =============================================================================
 # REQUIREMENTS.TXT — Projet SolarDash | Auteur : Sona KOULIBALY (SK)
-# Python 3.12
+# Python 3.12 — compatible Render
 # =============================================================================
 
 # Dash & Plotly
@@ -16,8 +17,8 @@ numpy==1.26.4
 openpyxl==3.1.3
 reportlab==4.2.2
 
-# Sécurité — variables d'environnement en local
+# Sécurité
 python-dotenv==1.0.1
 
-# Serveur production (Render)
+# Serveur production
 gunicorn==22.0.0
