@@ -1,0 +1,42 @@
+“Suivi et analyse de la production d’énergie solaire d’un parc photovoltaïque”
+
+
+Base_donne : solar_data
+
+
+Objectifs pédagogiques :
+1.Suivre la production horaire et journalière de panneaux photovoltaïques.
+
+2.Détecter les anomalies (production nulle, écart réel vs théorique).
+
+3.Visualiser l’effet des conditions environnementales sur la production.
+
+4.Comparer la production DC (directe) et AC (après conversion) pour analyser l’efficacité.
+
+5.Créer un tableau de bord interactif avec Plotly/Dash pour visualiser les indicateurs clés.
+Visualisations possibles :
+
+•Courbe de production DC et AC par heure (line chart)
+•Courbe de production cumulée journalière (line chart)
+•Heatmap irradiation × production
+•Comparaison température module vs production
+•KPI : production totale, rendement AC/DC, production moyenne par heure
+
+Variable	Type	Description pédagogique
+Date	date	Jour de mesure. Permet d’agréger la production par jour.
+Time	int	Heure de mesure (0–23). Utile pour tracer les courbes horaires.
+DateTime	datetime	Combinaison Date + Time. Facilite les séries temporelles complètes.
+Country	string	Pays du site. Peut servir à comparer plusieurs sites si tu en as plusieurs.
+DC_Power	float	Puissance directe générée par les panneaux PV (kW). Mesure la production avant conversion.
+AC_Power	float	Puissance après conversion en courant alternatif (kW). Indicateur du rendement réel exploitable.
+Ambient_Temperature	float	Température ambiante (°C). Permet d’analyser l’effet du climat sur la production.
+Module_Temperature	float	Température des panneaux (°C). La performance PV diminue si la température est trop élevée.
+Irradiation	float	Irradiation solaire (kW/m²). Indicateur direct de l’ensoleillement.
+Day	int	Jour du mois. Peut servir pour des agrégations rapides.
+Month	int	Mois. Utile pour analyser saisonnalité.
+Hour	int	Heure de la journée (0–23). Pour analyser les pics de production.
+Daily_Yield	float	Production cumulée de la journée à l’heure donnée (kWh). Utile pour vérifier la progression.
+Total_Yield	float	Production totale depuis le début de l’année (kWh). Permet d’analyser la performance globale et la tendance.
+
+
+

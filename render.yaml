@@ -1,0 +1,17 @@
+# =============================================================================
+# render.yaml — Configuration déploiement Render
+# Auteur : Sona KOULIBALY (SK)
+# =============================================================================
+services:
+  - type: web
+    name: solardash
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:server -b 0.0.0.0:$PORT --workers 2 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true   # Render génère automatiquement une valeur sécurisée
