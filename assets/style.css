@@ -1,7 +1,7 @@
 /* =============================================================================
-   STYLE.CSS — Thème Solar Warm | Projet Énergie Solaire
+   STYLE.CSS — Thème Poussin Foncé | Projet Énergie Solaire
    Auteur : SK | Dashboard Parc Photovoltaïque
-   Palette : Marron Nuit profond + Acajou + Ambre + Orange brûlé
+   Palette : Poussin Foncé #4A3800 + Jaune lumineux #FCD34D + Ambre #F59E0B
    ============================================================================= */
 
 /* ─── GOOGLE FONTS & RESET ──────────────────────────────────────────────────── */
@@ -12,33 +12,33 @@
 :root {
   /* ── NOUVELLE PALETTE SOLAR WARM ── */
   --primary:        #F59E0B;           /* Ambre chaud — remplace orange */
-  --primary-glow:   rgba(245,158,11,0.22);
-  --secondary:      #1A0F00;           /* Marron nuit profond */
+  --primary-glow:   rgba(245,158,11,0.28);
+  --secondary:      #4A3800;           /* Marron nuit profond */
   --accent:         #FB923C;           /* Orange acajou vif */
-  --accent-glow:    rgba(251,146,60,0.2);
+  --accent-glow:    rgba(245,158,11,0.2);
   --success:        #10B981;           /* Vert émeraude — inchangé */
-  --warning:        #FCD34D;           /* Jaune doré doux */
+  --warning:        #FDE68A;           /* Jaune doré doux */
   --danger:         #EF4444;           /* Rouge — inchangé */
-  --purple:         #F97316;           /* Orange brûlé (remplace violet) */
-  --cyan:           #FBBF24;           /* Or chaud (remplace cyan) */
-  --pink:           #FB923C;           /* Acajou (remplace rose) */
+  --purple:         #FBBF24;           /* Orange brûlé (remplace violet) */
+  --cyan:            #F59E0B;           /* Or chaud (remplace cyan) */
+  --pink:            #FCD34D;           /* Acajou (remplace rose) */
 
   /* ── FONDS CHAUDS ── */
-  --bg:             #1A0F00;           /* Marron nuit — fond principal */
-  --card:           #2A1800;           /* Marron acajou — cartes */
-  --card-hover:     #341F00;           /* Acajou hover */
-  --border:         #4A2E00;           /* Bordure chaude */
+  --bg:             #4A3800;           /* Marron nuit — fond principal */
+  --card:           #574400;           /* Marron acajou — cartes */
+  --card-hover:     #6E5800;           /* Acajou hover */
+  --border:         #7A6200;           /* Bordure chaude */
 
   /* ── TEXTES ── */
   --text:           #FFF8EC;           /* Blanc chaud */
-  --muted:          #B8956A;           /* Beige doré — textes secondaires */
+  --muted:          #C8A83E;           /* Beige doré — textes secondaires */
 
   /* ── SYSTÈME ── */
   --font:           'Poppins', sans-serif;
   --radius:         12px;
   --radius-lg:      16px;
   --shadow:         0 4px 24px rgba(0,0,0,0.5);
-  --shadow-glow:    0 0 30px rgba(245,158,11,0.18);
+  --shadow-glow:    0 0 30px rgba(245,158,11,0.25);
 }
 
 html { scroll-behavior: smooth; }
@@ -61,8 +61,8 @@ body {
 .main-container {
   background: var(--bg);
   background-image:
-    radial-gradient(ellipse at 10% 20%, rgba(245,158,11,0.07) 0%, transparent 50%),
-    radial-gradient(ellipse at 90% 80%, rgba(251,146,60,0.05) 0%, transparent 50%);
+    radial-gradient(ellipse at 10% 20%, rgba(252,211,77,0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(245,158,11,0.05) 0%, transparent 50%);
   min-height: 100vh;
 }
 
@@ -75,7 +75,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 12px 28px;
-  background: rgba(26,15,0,0.96);
+  background: rgba(30,20,0,0.96);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 2px 20px rgba(0,0,0,0.6);
@@ -94,7 +94,7 @@ body {
 .navbar-logo {
   height: 44px;
   width: auto;
-  filter: drop-shadow(0 0 8px rgba(245,158,11,0.6));
+  filter: drop-shadow(0 0 8px rgba(252,211,77,0.55));
   transition: transform 0.3s ease;
 }
 .navbar-logo:hover { transform: scale(1.08) rotate(-3deg); }
@@ -157,7 +157,7 @@ body {
   justify-content: space-between;
   padding: 48px 40px;
   margin: 24px 0;
-  background: linear-gradient(135deg, rgba(42,24,0,0.95) 0%, rgba(26,15,0,0.98) 100%);
+  background: linear-gradient(135deg, rgba(57,44,0,0.95) 0%, rgba(42,32,0,0.98) 100%);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   position: relative;
@@ -166,7 +166,7 @@ body {
 .hero-banner::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(251,146,60,0.04) 60%, transparent 100%);
+  background: linear-gradient(135deg, rgba(252,211,77,0.07) 0%, rgba(245,158,11,0.04) 60%, transparent 100%);
   pointer-events: none;
 }
 
@@ -177,7 +177,7 @@ body {
   align-items: center;
   padding: 6px 14px;
   background: var(--primary-glow);
-  border: 1px solid rgba(245,158,11,0.35);
+  border: 1px solid rgba(252,211,77,0.3);
   border-radius: 20px;
   font-size: 12px;
   color: var(--primary);
@@ -235,7 +235,7 @@ body {
 .sun-ring {
   position: absolute;
   border-radius: 50%;
-  border: 2px solid rgba(245,158,11,0.3);
+  border: 2px solid rgba(252,211,77,0.28);
   animation: rotate-ring 8s linear infinite;
 }
 .sun-ring-1 { width: 140px; height: 140px; animation-duration: 8s; }
@@ -244,8 +244,8 @@ body {
 
 @keyframes rotate-ring { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes pulse-sun {
-  0%,100% { transform: scale(1);   filter: drop-shadow(0 0 10px rgba(245,158,11,0.5)); }
-  50%      { transform: scale(1.1); filter: drop-shadow(0 0 22px rgba(245,158,11,0.9)); }
+  0%,100% { transform: scale(1);   filter: drop-shadow(0 0 10px rgba(252,211,77,0.5)); }
+  50%      { transform: scale(1.1); filter: drop-shadow(0 0 22px rgba(252,211,77,0.9)); }
 }
 
 /* ─── FILTERS PANEL ──────────────────────────────────────────────────────────── */
@@ -291,7 +291,7 @@ body {
 
 /* ─── SOLAR DROPDOWN ─────────────────────────────────────────────────────────── */
 .solar-dropdown .Select-control,
-.solar-dropdown .Select-menu-outer { background: #1A0F00 !important; border-color: var(--border) !important; }
+.solar-dropdown .Select-menu-outer { background: #4A3800 !important; border-color: var(--border) !important; }
 .solar-dropdown .Select-value-label { color: var(--text) !important; }
 .solar-dropdown .Select-placeholder { color: var(--muted) !important; }
 
@@ -326,9 +326,9 @@ body {
   gap: 16px;
   margin-bottom: 28px;
   padding: 20px 24px;
-  background: linear-gradient(135deg, rgba(245,158,11,0.09), rgba(251,146,60,0.05));
+  background: linear-gradient(135deg, rgba(252,211,77,0.08), rgba(245,158,11,0.05));
   border-radius: var(--radius);
-  border: 1px solid rgba(245,158,11,0.18);
+  border: 1px solid rgba(252,211,77,0.2);
 }
 .section-intro-icon { font-size: 40px; flex-shrink: 0; }
 .section-main-title {
@@ -362,7 +362,7 @@ body {
 .kpi-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-glow);
-  border-color: rgba(245,158,11,0.35);
+  border-color: rgba(252,211,77,0.3);
   background: var(--card-hover);
 }
 
@@ -393,7 +393,7 @@ body {
   font-size: 18px;
   color: var(--primary);
   flex-shrink: 0;
-  border: 1px solid rgba(245,158,11,0.25);
+  border: 1px solid rgba(252,211,77,0.22);
 }
 .section-title    { font-size: 20px; font-weight: 700; color: var(--text); margin: 0; }
 .section-subtitle { font-size: 12px; color: var(--muted); margin-top: 3px; }
@@ -426,7 +426,7 @@ body {
   transition: all 0.3s ease;
   flex: 1;
 }
-.chart-card:hover { border-color: rgba(245,158,11,0.25); }
+.chart-card:hover { border-color: rgba(252,211,77,0.22); }
 
 .chart-header {
   display: flex;
@@ -458,7 +458,7 @@ body {
 .badge-count {
   background: var(--primary-glow);
   color: var(--primary);
-  border: 1px solid rgba(245,158,11,0.3);
+  border: 1px solid rgba(252,211,77,0.28);
   border-radius: 20px;
   padding: 3px 12px;
   font-size: 11px;
@@ -489,7 +489,7 @@ body {
 .export-card:hover {
   border-color: var(--primary);
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(245,158,11,0.18);
+  box-shadow: 0 8px 30px rgba(252,211,77,0.2);
 }
 
 .export-icon      { font-size: 40px; color: var(--success); }
@@ -536,7 +536,7 @@ body {
 }
 
 .footer-left    { display: flex; align-items: center; gap: 12px; }
-.footer-logo    { height: 36px; filter: drop-shadow(0 0 6px rgba(245,158,11,0.4)); }
+.footer-logo    { height: 36px; filter: drop-shadow(0 0 6px rgba(252,211,77,0.4)); }
 .footer-brand   { font-size: 16px; font-weight: 700; color: var(--primary); }
 .footer-tagline { font-size: 11px; color: var(--muted); margin-top: 2px; }
 
@@ -587,18 +587,18 @@ body {
 .js-plotly-plot .plotly .modebar-btn:hover path { fill: var(--primary) !important; }
 
 /* ─── DASH DROPDOWN DARK WARM ────────────────────────────────────────────────── */
-.Select-control      { background: #1A0F00 !important; border-color: var(--border) !important; color: var(--text) !important; }
-.Select-menu-outer   { background: #2A1800 !important; border-color: var(--border) !important; z-index: 9999 !important; }
-.Select-option       { background: #2A1800 !important; color: var(--text) !important; }
+.Select-control      { background: #4A3800 !important; border-color: var(--border) !important; color: var(--text) !important; }
+.Select-menu-outer   { background: #574400 !important; border-color: var(--border) !important; z-index: 9999 !important; }
+.Select-option       { background: #574400 !important; color: var(--text) !important; }
 .Select-option:hover,
 .Select-option.is-focused { background: var(--primary-glow) !important; color: var(--primary) !important; }
 .Select-value-label  { color: var(--text) !important; }
 .Select-placeholder  { color: var(--muted) !important; }
 .Select-arrow        { border-top-color: var(--muted) !important; }
 .Select.is-open .Select-arrow { border-bottom-color: var(--muted) !important; }
-.Select--multi .Select-value      { background: var(--primary-glow) !important; border-color: rgba(245,158,11,0.3) !important; color: var(--primary) !important; }
-.Select--multi .Select-value-icon { border-right-color: rgba(245,158,11,0.3) !important; color: var(--primary) !important; }
-.VirtualizedSelectOption         { background: #2A1800 !important; color: var(--text) !important; }
+.Select--multi .Select-value      { background: var(--primary-glow) !important; border-color: rgba(252,211,77,0.28) !important; color: var(--primary) !important; }
+.Select--multi .Select-value-icon { border-right-color: rgba(252,211,77,0.28) !important; color: var(--primary) !important; }
+.VirtualizedSelectOption         { background: #574400 !important; color: var(--text) !important; }
 .VirtualizedSelectFocusedOption  { background: var(--primary-glow) !important; }
 
 /* ─── RANGESLIDER DARK WARM ──────────────────────────────────────────────────── */
