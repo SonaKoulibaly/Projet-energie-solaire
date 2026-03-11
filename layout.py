@@ -1,6 +1,6 @@
 # =============================================================================
 # LAYOUT.PY — Interface Utilisateur | Projet Énergie Solaire
-# Auteur : SK | Dashboard Parc Photovoltaïque
+# Auteur : Sona.K | Dashboard Parc Photovoltaïque
 # =============================================================================
 
 import dash
@@ -518,7 +518,7 @@ footer = html.Div(
             ]),
             html.Div(className="footer-right", children=[
                 html.P("Réalisé par", className="footer-by"),
-                html.Span("SK", className="footer-author"),
+                html.Span("Sona KOULIBALY", className="footer-author"),
                 html.P("Python 3.12 · Dash · Plotly · Pandas", className="footer-tech"),
             ]),
         ]),
@@ -608,4 +608,5 @@ layout = html.Div(
         # Footer
         footer,
     ]
+
 )
